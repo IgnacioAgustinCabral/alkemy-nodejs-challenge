@@ -1,0 +1,32 @@
+{
+  "name": "alkemy",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IgnacioAgustinCabral/alkemy-nodejs-challenge.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IgnacioAgustinCabral/alkemy-nodejs-challenge/issues"
+  },
+  "homepage": "https://github.com/IgnacioAgustinCabral/alkemy-nodejs-challenge#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^14.3.2",
+    "express": "^4.17.2",
+    "nodemon": "^2.0.15",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.15.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
+  }
+}
