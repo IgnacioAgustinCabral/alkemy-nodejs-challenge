@@ -6,11 +6,13 @@ module.exports = {
 			personaje_id: {
 				allowNull: false,
 				primaryKey: true,
+                autoIncrement : false,
 				type: Sequelize.INTEGER,
 			},
 			pelicula_o_serie_id: {
 				allowNull: false,
 				primaryKey: true,
+                autoIncrement : false,
 				type: Sequelize.INTEGER,
 			},
             createdAt: {
