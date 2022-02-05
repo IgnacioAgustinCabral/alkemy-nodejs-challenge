@@ -9,11 +9,7 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			// define association here
-			this.personajeId = this.hasMany(models.Personaje, {
-				foreignKey: 'personaje_id',
-			});
-
-            this.generoId = this.hasMany(models.Genero, {
+			this.genero_id = this.hasMany(models.Genero, {
 				foreignKey: 'genero_id',
 			});
 		}
@@ -35,6 +31,14 @@ module.exports = (sequelize, DataTypes) => {
 			calificacion: {
 				type: DataTypes.INTEGER,
 				allowNull: false,
+			},
+			genero_id: {
+				type: DataTypes.INTEGER,
+				allowNull: false,
+				references: {
+					model: 'Genero',
+					key: 'id',
+				},
 			},
 		},
 		{
