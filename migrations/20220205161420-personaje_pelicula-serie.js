@@ -5,13 +5,11 @@ module.exports = {
 		await queryInterface.createTable('personaje_pelicula-serie_crossreference', {
 			personaje_id: {
 				allowNull: false,
-				autoIncrement: true,
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
 			pelicula_o_serie_id: {
 				allowNull: false,
-				autoIncrement: true,
 				primaryKey: true,
 				type: Sequelize.INTEGER,
 			},
