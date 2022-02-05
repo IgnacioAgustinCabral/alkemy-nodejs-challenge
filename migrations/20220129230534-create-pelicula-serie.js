@@ -32,11 +32,7 @@ module.exports = {
 				allowNull: false,
 				type: Sequelize.DATE,
 			},
-			personaje_id: {
-				allowNull: false,
-				type: Sequelize.INTEGER,
-			},
-            genero_id: {
+			genero_id: {
 				allowNull: false,
 				type: Sequelize.INTEGER,
 			},
