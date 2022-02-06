@@ -9,34 +9,38 @@ module.exports = (sequelize, DataTypes) => {
 		 */
 		static associate(models) {
 			this.personaje_id = this.hasMany(models.Personaje, {
-				foreignKey: 'personaje_id',
+				foreignKey: 'id', //hace referencia a las columna id de personaje
 			});
 			this.pelicula_o_serie_id = this.hasMany(models.PeliculaSerie, {
-				foreignKey: 'pelicula_o_serie_id',
+				foreignKey: 'id', //hace referencia a las columna id de pelicula_o_serie
 			});
 		}
 	}
 	PersonajePeliculaSerie.init(
 		{
-			personaje_id: DataTypes.INTEGER,
-			allowNull: false,
-			references: {
-				model: 'Personaje',
-				key: 'id',
+			personaje_id: {
+				type: DataTypes.INTEGER,
+				allowNull: false,
+				references: {
+					model: 'Personaje',
+					key: 'id',
+				},
 			},
-		},
-		{
-			pelicula_o_serie_id: DataTypes.INTEGER,
-			allowNull: false,
-			references: {
-				model: 'PeliculaSerie',
-				key: 'id',
+			pelicula_o_serie_id: {
+				type: DataTypes.INTEGER,
+				allowNull: false,
+				references: {
+					model: 'PeliculaSerie',
+					key: 'id',
+				},
 			},
 		},
 		{
 			sequelize,
 			modelName: 'PersonajePeliculaSerie',
 			tableName: 'personaje_pelicula-serie_crossreference',
+            timestamps: true,
+            underscored: true,
 		}
 	);
 	return PersonajePeliculaSerie;

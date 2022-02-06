@@ -45,7 +45,9 @@ module.exports = (sequelize, DataTypes) => {
 			sequelize,
 			modelName: 'PeliculaSerie',
 			tableName: 'peliculas_o_series',
+            timestamps: true,
+            underscored: true,
 		}
 	);
-	return Pelicula - Serie;
+	return PeliculaSerie;
 };

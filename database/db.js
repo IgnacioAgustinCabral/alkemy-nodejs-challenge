@@ -8,6 +8,7 @@ const sequelize = new Sequelize(
 	{
 		host: 'localhost',
 		dialect: 'postgres',
+        logging:false //SACA LOS EXECUT DEFAULT DE LA CONSOLA
 	}
 );
 
