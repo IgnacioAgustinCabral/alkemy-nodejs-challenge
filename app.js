@@ -5,7 +5,7 @@ const sequelize = require('./database/db');
 
 const app = express();
 const cors = require('cors');
-const PersonajeRouter = require('./router/PersonajeRouter');
+const PersonajeRouter = require('./routes/PersonajeRouter');
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
